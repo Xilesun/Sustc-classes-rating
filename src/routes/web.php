@@ -16,4 +16,10 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-$router->get('/classes', 'ClassesController@show');
+//Get all classes infomation
+$router->get('classes', 'ClassesController@showClasses');
+
+$router->group(['prefix' => 'classes/{class_id}/ratings'], function () use ($router) {
+  //Get ratings of class
+  $router->get('/', 'RatingsController@showRatingsByClass');
+});
