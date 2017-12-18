@@ -2,5 +2,5 @@
 /.idea
 Homestead.json
 Homestead.yaml
-.env/Users/xile/FE/3waters-php/.gitignore
+.env
 .DS_Store
