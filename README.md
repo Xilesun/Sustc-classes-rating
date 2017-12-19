@@ -15,4 +15,11 @@
 ### 可能涉及的新内容
 - TypeScript
 - Vue深入
-- 成熟ORM框架使用（lumen)
+- 成熟框架使用（lumen)
+
+### 开发过程中涉及的坑、新技能、工具
+- nginx工作目录为src，但访问根目录设置到src/public
+- lumen作为lavarel精简版部分功能的缺失
+- Vue与lumen的整合
+- lavarel-elixir
+
