@@ -22,4 +22,10 @@ $router->get('classes', 'ClassesController@showClasses');
 $router->group(['prefix' => 'classes/{class_id}/ratings'], function () use ($router) {
   //Get ratings of class
   $router->get('/', 'RatingsController@showRatingsByClass');
+  //Add new rating content
+  $router->post('/', 'RatingsController@addRating');
+  //Update a rating content
+  $router->put('/{rating_id}', 'RatingsController@updateRating');
+  //Like a rating
+  $router->put('/{rating_id}/like', 'RatingsController@likeRating');
 });
