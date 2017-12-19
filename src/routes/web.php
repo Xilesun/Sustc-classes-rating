@@ -27,5 +27,5 @@ $router->group(['prefix' => 'classes/{class_id}/ratings'], function () use ($rou
   //Update a rating content
   $router->put('/{rating_id}', 'RatingsController@updateRating');
   //Like a rating
-  $router->put('/{rating_id}/like', 'RatingsController@likeRating');
+  $router->patch('/{rating_id}/like', 'RatingsController@likeRating');
 });

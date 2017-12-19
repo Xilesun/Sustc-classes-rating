@@ -25,10 +25,10 @@ class RatingsController extends Controller {
     $star = $request->star;
     $comment = $request->comment;
 
-    Ratings::whereColumn([['class_id', '=', $class_id], ['id', '=', $rating_id]])->update(['grade' => $grade, 'star' => $star, 'comment' => $comment]);
+    Ratings::where([['class_id', '=', $class_id], ['id', '=', $rating_id]])->update(['grade' => $grade, 'star' => $star, 'comment' => $comment]);
   }
 
   public function likeRating($class_id, $rating_id) {
-    Ratings::whereColumn([['class_id', '=', $class_id], ['id', '=', $rating_id]])->increment('likess');
+    Ratings::where([['class_id', '=', $class_id], ['id', '=', $rating_id]])->increment('likes');
   }
 }
