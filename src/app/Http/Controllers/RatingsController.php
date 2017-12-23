@@ -28,6 +28,10 @@ class RatingsController extends Controller {
     Ratings::where([['class_id', '=', $class_id], ['id', '=', $rating_id]])->update(['grade' => $grade, 'star' => $star, 'comment' => $comment]);
   }
 
+  public function deleteRating(Request $request, $class_id, $rating_id) {
+    Ratings::where([['class_id', '=', $class_id], ['id', '=', $rating_id]])->delete();
+  }
+
   public function likeRating($class_id, $rating_id) {
     Ratings::where([['class_id', '=', $class_id], ['id', '=', $rating_id]])->increment('likes');
   }
